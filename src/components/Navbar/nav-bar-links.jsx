@@ -30,6 +30,10 @@ const TextBlock = styled.header`
   text-align: left;
   font-size: var(--font-size-4xs);
   color: var(--color-darkslategray-200);
+
+  @media (max-width: 400px){
+    display: none;
+  }
 `;
 
 const ReferAndEarnContainer = styled.div`
@@ -127,15 +131,16 @@ const RectangleGroup2 = styled.div`
   flex-direction: row;
   align-items: flex-start;
   justify-content: space-between;
+  overflow-x: hidden;
   padding: var(--padding-mini) var(--padding-7xl) var(--padding-10xs)
     var(--padding-38xl);
   gap: var(--gap-xl);
   max-width: 100%;
   z-index: 1;
   font-family: 'Mulish', sans-serif;
-  @media screen and (max-width: 800px) {
-    padding-left: var(--padding-9xl);
-    box-sizing: border-box;
+
+  @media screen and (max-width: 400px) {
+    display: none;
   }
 `;
 
@@ -294,6 +299,10 @@ const RightContainer=styled.div`
   justify-content: flex-end;
   padding-right: 50px;
   /* background-color: red; */
+
+  @media (max-width: 400px){
+    display:none;
+  }
 `;
 
 const Title=styled.div`
@@ -318,19 +327,19 @@ const Group160 = styled.img`
   padding: 0px 10px;
   z-index: 2;
 `;
-const MidNavBar = styled.div`
+const MidNavBar = styled.nav`
   width: 100%;
   height: 50px; 
   background-color: #FDEDCD;
   display: flex;
   flex-direction: row;
 `;
-const NavbarInnerContainer=styled.div`
 
-`;
 const NavbarExtendedContainer=styled.div`
 
 `;
+
+const OpenLinksButton = styled.button
 
 const NavBarLinks = () => {
   return (
