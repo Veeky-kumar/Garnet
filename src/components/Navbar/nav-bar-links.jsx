@@ -244,7 +244,7 @@ const TextLabel = styled.div`
 
 const BlackIcon2 = styled.img`
   width: 22px;
-  height: 22.6px;
+  height: auto;
   margin: 0 10px;
   flex: 1;
   object-fit: contain;  /* Ensures the entire image is visible within the container */
@@ -339,7 +339,27 @@ const NavbarExtendedContainer=styled.div`
 
 `;
 
-const OpenLinksButton = styled.button
+
+const NavExtendedIcon=styled.div`
+  display: flex;
+  flex-direction: row;
+
+  @media (min-width:401px){
+    display: none;
+  }
+`;
+
+const Hamberg=styled.div`
+  width: 25px;
+  height: 15px;
+  border: none;
+  color:black;
+  cursor:pointer;
+  z-index: 200;
+  @media (min-width: 400px){
+    display:none;
+  }
+`;
 
 const NavBarLinks = () => {
   return (
@@ -361,6 +381,8 @@ const NavBarLinks = () => {
         
         <MidNavBar>
           <LeftContainer>
+            {/* Left side for responsive */}
+            <Hamberg src="Group-7266.svg"/>
             <Group160 alt="" src="/group-160.svg"/>
               <Title>
                 <GranetLanee>GARNET LANEE</GranetLanee>
@@ -405,13 +427,15 @@ const NavBarLinks = () => {
             </RightNavbarContainer>
             <RightNavbarContainer>
               <BlackIcon2 src="/profile.svg "/>
-    
-
             </RightNavbarContainer>
             
-
+          {/* here for responsive */}
+          <NavExtendedIcon>
+              <BlackIcon2 src="/image-126.svg"/>
+              <BlackIcon2 src="/wishlist1.svg "/>
+              <BlackIcon2 src="/cart1.svg "/>
+          </NavExtendedIcon>
           </RightContainer>
-          
         </MidNavBar>
         <NavbarExtendedContainer></NavbarExtendedContainer>
 
